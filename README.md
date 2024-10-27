@@ -151,8 +151,9 @@ The tool provides an interactive help menu that varies by search engine. Simply 
 
 Future developments include:
 - Expanding search engines (Yahoo, Baidu, etc.).
-- Cleaning up operators with search engines.
+- Researching and cleaning up current search engines operators.
 - Saving past queries to a file for reuse.
+- Clean up user interface and presentation of dorks.
 - And much more!
 
 
