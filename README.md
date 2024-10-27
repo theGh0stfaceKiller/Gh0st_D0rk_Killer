@@ -30,7 +30,132 @@ No external dependencies are required. This script runs on pure Python, making i
    git clone https://github.com/yourusername/Gh0stD0rk-Killer.git
    
    cd Gh0stD0rk-Killer
-2. **Usage**:
-```bash
+   ```
+
+2. **Run the Script**:
+   ```bash
    sudo python GDK.py
+   ```
+
+3. **Follow the Prompts** to create a customized search dork.
+
+### Example
+
+Here’s how the script may look in use:
+
 ```
+┌──(kali㉿kali)-[~/Desktop]
+└─$ sudo python GDK.py
+
++-------------------------------------------------------------------------------------------+
+|                                                                                           |
+|              ('-. .-.            .-')   .-') _   _ .-') _            _  .-')  .-. .-')    |
+|             ( xx )  /           ( xx ).(  xx) ) ( (  xx) )          ( \( xx ) \  ( xx )   |
+|    ,----.   ,--. ,--.  .----.  (_)---\_)     '._ \     .'_   .----.  ,------. ,--. ,--.   |
+|   '  .-./-')|  | |  | /  ..  \ /    _ ||'--...__),`'--..._) /  ..  \ |   /`. '|  .'   /   |
+|   |  |_( xx )   .|  |.  /  \  .\  :` `.'--.  .--'|  |  \  '.  /  \  .|  /  | ||      /,   |
+|   |  | .--, \       ||  |  '  | '..`''.)  |  |   |  |   ' ||  |  '  ||  |_.' ||     ' _)  |
+|  (|  | '. (_/  .-.  |'  \  /  '.-._)   \  |  |   |  |   / :'  \  /  '|  .  '.'|  .   \    |
+|   |  '--'  ||  | |  | \  `'  / \       /  |  |   |  '--'  / \  `'  / |  |\  \ |  |\   \   |
+|    `------' `--' `--'  `---''   `-----'   `--'   `-------'   `---''  `--' '--'`--' '--'   |
+|  .-. .-')                               ('-.  _  .-')                                     |
+|  \  ( xx )                            _(  xx)( \( xx )                                    |
+|  ,--. ,--. ,-.-')  ,--.      ,--.    (,------.,------.                                    |
+|  |  .'   / |  |xx) |  |.-')  |  |.-') |  .---'|   /`. '                                   |
+|  |      /, |  |  \ |  | xx ) |  | xx )|  |    |  /  | |                                   |
+|  |     ' _)|  |(_/ |  |`-' | |  |`-' (|  '--. |  |_.' |                                   |
+|  |  .   \ ,|  |_.'(|  '---.'(|  '---.'|  .--' |  .  '.'                                   |
+|  |  |\   (_|  |    |      |  |      | |  `---.|  |\  \                                    |
+|  `--' '--' `--'    `------'  `------' `------'`--' '--'                                   |
+|                                                                                           |
++-------------------------------------------------------------------------------------------+        
+    
+    Created by: The_Gh0stface_Killer
+    
+    This script will help you generate dorks for search engines like Google, Bing, DuckDuckGo, and Yandex.
+    Advanced operators will help you refine your search.
+
+    
+
+[+] Which search engine are you using?
+ 1. Google
+ 2. Bing
+ 3. DuckDuckGo
+ 4. Yandex
+
+[+] Enter the number corresponding to your choice (1-4): 1
+
+[+] Select the number corresponding to your operator of choice for Google:
+
+[-] Type 'help' to display detailed explanations of each operator.
+
+1. site:
+2. intitle:
+3. inurl:
+4. filetype:
+5. intext:
+6. link:
+[+] Enter the number corresponding to your operator of choice, or type 'help': 1
+[+] Enter the phrase to search for: amazon.com
+[+] Would you like to add another operator? (yes/no): yes
+[+] Do you want to use AND or OR to chain the operators? (AND/OR): AND
+
+[+] Select the number corresponding to your operator of choice for Google:
+
+[-] Type 'help' to display detailed explanations of each operator.
+
+1. site:
+2. intitle:
+3. inurl:
+4. filetype:
+5. intext:
+6. link:
+[+] Enter the number corresponding to your operator of choice, or type 'help': 5
+[+] Enter the phrase to search for: cookies
+[+] Would you like to add another operator? (yes/no): no
+
+[+] Here is your generated search dork for Google:
+
+[-] site:amazon.com AND intext:cookies
+
+**Copy and paste the dork into your browser to perform the search.**
+
+```
+
+### Help Menu
+
+The tool provides an interactive help menu that varies by search engine. Simply type `help` at any operator selection prompt to get descriptions.
+
+- **Google, Bing, DuckDuckGo Operators**:
+  - `site:` - Limits search results to a specific site.
+  - `intitle:` - Searches for keywords in the title of a page.
+  - `inurl:` - Filters results by keywords in the URL.
+  - `filetype:` - Restricts results to a specific file type.
+  - `intext:` - Searches within the page text.
+  - `link:` - Finds pages linking to a URL.
+
+- **Yandex Operators**:
+  - `+` - Requires word inclusion.
+  - `-` - Excludes word.
+  - `""` - Exact phrase search.
+  - `*` - Wildcard.
+  - `|` - OR operator.
+  - `~~` - NOT operator.
+  - `url:` - Search in a specific URL.
+  - `site:` - Domain-limited search.
+  - `domain:` - Limits to the main domain.
+  - `title:` - Search keywords in title.
+  - `date:` - Filters by date.
+  
+## Planned Improvements
+
+Future developments include:
+- Expanding search engines (Yahoo, Baidu, etc.).
+- Cleaning up operators with search engines.
+- Saving past queries to a file for reuse.
+- And much more!
+
+
+Thank you for choosing Gh0stD0rk Killer! 👻🔪
+
+
