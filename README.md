@@ -44,50 +44,62 @@ No external dependencies are required. This script runs on pure Python, making i
 Here’s how the script may look in use:
 
 ```
-┌──(kali㉿kali)-[~/Desktop]
+┌──(kali㉿kali)
 └─$ sudo python GDK.py
 
 +-------------------------------------------------------------------------------------------+
-|                                                                                           |
-|              ('-. .-.            .-')   .-') _   _ .-') _            _  .-')  .-. .-')    |
-|             ( xx )  /           ( xx ).(  xx) ) ( (  xx) )          ( \( xx ) \  ( xx )   |
-|    ,----.   ,--. ,--.  .----.  (_)---\_)     '._ \     .'_   .----.  ,------. ,--. ,--.   |
-|   '  .-./-')|  | |  | /  ..  \ /    _ ||'--...__),`'--..._) /  ..  \ |   /`. '|  .'   /   |
-|   |  |_( xx )   .|  |.  /  \  .\  :` `.'--.  .--'|  |  \  '.  /  \  .|  /  | ||      /,   |
-|   |  | .--, \       ||  |  '  | '..`''.)  |  |   |  |   ' ||  |  '  ||  |_.' ||     ' _)  |
-|  (|  | '. (_/  .-.  |'  \  /  '.-._)   \  |  |   |  |   / :'  \  /  '|  .  '.'|  .   \    |
-|   |  '--'  ||  | |  | \  `'  / \       /  |  |   |  '--'  / \  `'  / |  |\  \ |  |\   \   |
-|    `------' `--' `--'  `---''   `-----'   `--'   `-------'   `---''  `--' '--'`--' '--'   |
-|  .-. .-')                               ('-.  _  .-')                                     |
-|  \  ( xx )                            _(  xx)( \( xx )                                    |
-|  ,--. ,--. ,-.-')  ,--.      ,--.    (,------.,------.                                    |
-|  |  .'   / |  |xx) |  |.-')  |  |.-') |  .---'|   /`. '                                   |
-|  |      /, |  |  \ |  | xx ) |  | xx )|  |    |  /  | |                                   |
-|  |     ' _)|  |(_/ |  |`-' | |  |`-' (|  '--. |  |_.' |                                   |
-|  |  .   \ ,|  |_.'(|  '---.'(|  '---.'|  .--' |  .  '.'                                   |
-|  |  |\   (_|  |    |      |  |      | |  `---.|  |\  \                                    |
-|  `--' '--' `--'    `------'  `------' `------'`--' '--'                                   |
-|                                                                                           |
-+-------------------------------------------------------------------------------------------+        
-    
-    Created by: The_Gh0stface_Killer
-    
-    This script will help you generate dorks for search engines like Google, Bing, DuckDuckGo, and Yandex.
-    Advanced operators will help you refine your search.
+|                                                                                             |
+|           ('-. .-.            .-')   .-') _   _ .-') _            _  .-')  .-. .-')         |
+|          ( xx )  /           ( xx ).(  xx) ) ( (  xx) )          ( \( xx ) \  ( xx )        |
+|   ,----.   ,--. ,--.  .----.  (_)---\_)     '._ \     .'_   .----.  ,------. ,--. ,--.      |
+|  '  .-./-')|  | |  | /  ..  \ /    _ ||'--...__),`'--..._) /  ..   \ |   /`. '|  .'   /     |
+|  |  |_( xx )   .|  |.  /  \  .\  :` `.'--.  .--'|  |   \  '. /  \  . |  /  | ||      /,     |
+|  |  | .--, \       ||  |  '   |'..`''.)  |  |   |  |   ' || |    ' | | |_.'  ||     ' _)    |
+| (|  | '. (_/  .-.  |'  \  /  '.-._)   \  |  |   |  |   / :'  \   / ' |  .  '.'|  .   \      |
+|  |  '--'  ||  | |  | \  `'  / \       /  |  |   |  '--'  / \  ` ' /  |  |\  \ |  |\   \     |
+|   `------' `--' `--'  `---''   `-----'   `--'   `-------'   `---''  `--' '--'`--' '--'      |
+|  .-. .-')                               ('-.  _  .-')                                       |
+|  \  ( xx )                            _(  xx)( \( xx )                                      |
+|  ,--. ,--. ,-.-')  ,--.      ,--.    (,------.,------.                                      |
+|  |  .'   / |  |xx) |  |.-')  |  |.-') |  .---'|   /`. '                                     |
+|  |      /, |  |  \ |  | xx ) |  | xx )|  |    |  /  | |                                     |
+|  |     ' _)|  |(_/ |  |`-' | |  |`-' (|  '--. |  |_.' |                                     |
+|  |  .   \ ,|  |_.'(|  '---.'(|  '---.'|  .--' |  .  '.'                                     |
+|  |  |\   (_|  |    |      |  |      | |  `---.|  |\  \                                      |
+|  `--' '--' `--'    `------'  `------' `------'`--' '--'                                     |
+|                                                                                             |
+|     Created by: The_Gh0stface_Killer                                                        |
+|                                                                                             |
+|     This script will help you generate dorks for search engines.                            |
+|                                                                                             |
+|     Advanced operators will help you refine your search.                                    |
+|                                                                                             |
+|     Type 'exit' at any prompt to quit the program.                                          |
+|                                                                                             |
++-------------------------------------------------------------------------------------------+
 
-    
 
-[+] Which search engine are you using?
- 1. Google
- 2. Bing
- 3. DuckDuckGo
- 4. Yandex
++-------------------------------------------------------------------------------------------+
+|                                                                                             |
+| [+] Which search engine are you using?                                                      |
+|                                                                                             |
+|  1. Google                                                                                  |
+|  2. Bing                                                                                    |
+|  3. DuckDuckGo                                                                              |
+|  4. Yandex                                                                                  |
+|                                                                                             |
++-------------------------------------------------------------------------------------------+
 
 [+] Enter the number corresponding to your choice (1-4): 1
 
-[+] Select the number corresponding to your operator of choice for Google:
 
-[-] Type 'help' to display detailed explanations of each operator.
++-------------------------------------------------------------------------------------------+
+|                                                                                             |
+| [+] Select the number corresponding to your operator of choice for Google:                  |
+|                                                                                             |
+| [-] Type 'help' to display detailed explanations of each operator.                          |
+|                                                                                             |
++-------------------------------------------------------------------------------------------+
 
 1. site:
 2. intitle:
@@ -95,14 +107,23 @@ Here’s how the script may look in use:
 4. filetype:
 5. intext:
 6. link:
-[+] Enter the number corresponding to your operator of choice, or type 'help': 1
-[+] Enter the phrase to search for: amazon.com
+
+[+] Enter the number corresponding to your operator of choice, or type 'help': 5
+
+[+] Enter the phrase to search for: chicken sandwiches
+
 [+] Would you like to add another operator? (yes/no): yes
+
 [+] Do you want to use AND or OR to chain the operators? (AND/OR): AND
 
-[+] Select the number corresponding to your operator of choice for Google:
 
-[-] Type 'help' to display detailed explanations of each operator.
++-------------------------------------------------------------------------------------------+
+|                                                                                             |
+| [+] Select the number corresponding to your operator of choice for Google:                  |
+|                                                                                             |
+| [-] Type 'help' to display detailed explanations of each operator.                          |
+|                                                                                             |
++-------------------------------------------------------------------------------------------+
 
 1. site:
 2. intitle:
@@ -110,15 +131,25 @@ Here’s how the script may look in use:
 4. filetype:
 5. intext:
 6. link:
-[+] Enter the number corresponding to your operator of choice, or type 'help': 5
-[+] Enter the phrase to search for: cookies
+
+[+] Enter the number corresponding to your operator of choice, or type 'help': 1
+
+[+] Enter the phrase to search for: burgerking.com
+
 [+] Would you like to add another operator? (yes/no): no
 
-[+] Here is your generated search dork for Google:
 
-[-] site:amazon.com AND intext:cookies
++-------------------------------------------------------------------------------------------+
+| [+] Here is your generated search dork for Google:                                          |
+|                                                                                             |
+| [-] intext:chicken sandwiches AND site:burgerking.com                                       |
++-------------------------------------------------------------------------------------------+
 
-**Copy and paste the dork into your browser to perform the search.**
+
+[+] Would you like to generate another dork? (yes/no): no
+
+
+Thank you for using Gh0stD0rk Killer. Goodbye!
 
 ```
 
