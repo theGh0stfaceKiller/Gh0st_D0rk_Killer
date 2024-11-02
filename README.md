@@ -34,7 +34,7 @@ No external dependencies are required. This script runs on pure Python, making i
 
 2. **Run the Script**:
    ```bash
-   sudo python GDK.py
+   sudo python gdk.py
    ```
 
 3. **Follow the Prompts** to create a customized search dork.
@@ -45,7 +45,7 @@ Here’s how the script may look in use:
 
 ```
 ┌──(kali㉿kali)
-└─$ sudo python GDK.py
+└─$ sudo python gdk.py
 
 +-------------------------------------------------------------------------------------------+
 |                                                                                             |
