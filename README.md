@@ -155,28 +155,15 @@ Thank you for using Gh0stD0rk Killer. Goodbye!
 
 ### Help Menu
 
-The tool provides an interactive help menu that varies by search engine. Simply type `help` at any operator selection prompt to get descriptions.
+The tool provides an interactive help menu that varies by search engine. Simply type `help` at any operator selection prompt to get descriptions. Currently provide help for the following search engines:
 
-- **Google, Bing, DuckDuckGo Operators**:
-  - `site:` - Limits search results to a specific site.
-  - `intitle:` - Searches for keywords in the title of a page.
-  - `inurl:` - Filters results by keywords in the URL.
-  - `filetype:` - Restricts results to a specific file type.
-  - `intext:` - Searches within the page text.
-  - `link:` - Finds pages linking to a URL.
+- **Google**
+- **Yandex**
+- **Bing**
+- **Duck Duck Go**
+  
+- More to be added in the future!
 
-- **Yandex Operators**:
-  - `+` - Requires word inclusion.
-  - `-` - Excludes word.
-  - `""` - Exact phrase search.
-  - `*` - Wildcard.
-  - `|` - OR operator.
-  - `~~` - NOT operator.
-  - `url:` - Search in a specific URL.
-  - `site:` - Domain-limited search.
-  - `domain:` - Limits to the main domain.
-  - `title:` - Search keywords in title.
-  - `date:` - Filters by date.
   
 ## Planned Improvements
 
