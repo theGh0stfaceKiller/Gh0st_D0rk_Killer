@@ -240,5 +240,3 @@ def generate_search_dork():
 
 if __name__ == "__main__": 
     generate_search_dork()
-if __name__ == "__main__": 
-    generate_search_dork()
