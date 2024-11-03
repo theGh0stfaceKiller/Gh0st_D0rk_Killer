@@ -168,11 +168,20 @@ The tool provides an interactive help menu that varies by search engine. Simply 
 ## Planned Improvements
 
 Future developments include:
-- Expanding search engines (Yahoo, Baidu, etc.).
-- Researching and cleaning up current search engines operators.
-- Saving past queries to a file for reuse.
-- Clean up user interface and presentation of dorks.
-- And much more!
+
+1. Save dorks to file
+2. Pre-built dork templates
+3. Advanced search operators combination
+4. Auto-save settings and preferences
+5. Output formatting options
+6. Integration with web APIs
+7. Interactive help and operator suggestions
+8. Error handling for invalid operator combinations
+9. Time-based dork generation (automated mode)
+10. CLI arguments for quick dork generation
+11. Expanding search engines (Yahoo, Baidu, etc.).
+
+##### - And much more!
 
 
 Thank you for choosing Gh0stD0rk Killer! 👻🔪
