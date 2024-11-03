@@ -1,7 +1,5 @@
-# Gh0stD0rk Killer 👻🔪
-
+# Gh0stD0rk Killer
 ![gdk](https://github.com/user-attachments/assets/06cf5ca5-adb3-4ad8-bd50-69ef893b1aac)
-
 
 Welcome to **Gh0stD0rk Killer**, a tool designed for ethical hackers, OSINT investigators, and cybersecurity researchers to create advanced search engine dorks for refining search results on Google, Bing, DuckDuckGo, and Yandex. With options for chaining multiple operators, this tool lets you build complex queries for deep-dive investigations.
 
