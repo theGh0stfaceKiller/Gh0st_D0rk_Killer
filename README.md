@@ -181,7 +181,7 @@ Future developments include:
 10. CLI arguments for quick dork generation
 11. Expanding search engines (Yahoo, Baidu, etc.).
 
-##### - And much more!
+### - And much more!
 
 
 Thank you for choosing Gh0stD0rk Killer! 👻🔪
