@@ -171,15 +171,15 @@ Future developments include:
 
 1. Save dorks to file
 2. Pre-built dork templates
-3. Advanced search operators combination
+3. Advanced search operators combination - think nested search operators. 🤯
 4. Auto-save settings and preferences
 5. Output formatting options
 6. Integration with web APIs
 7. Interactive help and operator suggestions
 8. Error handling for invalid operator combinations
-9. Time-based dork generation (automated mode)
+9. Time-based dork generation (automated mode) 🤖
 10. CLI arguments for quick dork generation
-11. Expanding search engines (Yahoo, Baidu, etc.).
+11. Expanding search engines, like Shodan. 😎
 
 ### - And much more!
 
