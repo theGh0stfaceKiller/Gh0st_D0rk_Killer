@@ -15,7 +15,7 @@ Welcome to **Gh0stD0rk Killer**, a tool designed for ethical hackers, OSINT inve
 ## How It Works
 
 The script guides users through the following steps:
-1. **Search Engine Selection**: Choose a search engine from Google, Bing, DuckDuckGo, or Yandex.
+1. **Search Engine Selection**: Choose a search engine from Google, Bing, DuckDuckGo, Twitter, BlueSky or Yandex.
 2. **Operator Selection**: Select advanced operators like `site:`, `intitle:`, `date:`, and many others. Type `help` anytime to see available operators and descriptions.
 3. **Search Phrase Input**: Enter the search phrase to use with the selected operator.
 4. **Logical Chaining**: Optionally combine multiple operators with logical operators (AND/OR).
