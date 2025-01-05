@@ -6,7 +6,7 @@ Welcome to **Gh0stD0rk Killer**, a tool designed for ethical hackers, OSINT inve
 
 ## Features
 
-- **Search Engine Support**: Compatible with Google, Bing, DuckDuckGo, and Yandex.
+- **Search Engine Support**: Compatible with Google, Bing, DuckDuckGo, Yandex and now Twitter and BlueSky!
 - **Advanced Operators**: Supports unique operators for Yandex alongside common operators for Google, Bing, and DuckDuckGo.
 - **Dynamic Help Menu**: Displays detailed explanations for each operator, tailored for each search engine.
 - **Operator Chaining**: Allows combining multiple operators with `AND` and `OR` to refine searches further.
