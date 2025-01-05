@@ -113,6 +113,48 @@ def show_help_menu(search_engine):
         before:     - Date Filter: Finds results published before a specific date.
         after:      - Date Filter: Finds results published after a specific date.
         """
+    elif search_engine == "Bluesky":
+        help_message = """
+        "           - Exact Phrase: Finds posts containing an exact phrase (e.g., `"pixel art"`).
+        #           - Hashtag: Finds posts with a specific hashtag (e.g., `#pixelart`).
+        @           - Mention: Finds posts mentioning a user (e.g., `@kianamosser.bsky.social`).
+        to:         - To User: Finds posts directed to a specific user (e.g., `to:virtualcuriosities.com`).
+        mentions:   - Mentions User: Finds posts mentioning a user (e.g., `mentions:virtualcuriosities.com`).
+        mentions:me - Mentions Me: Finds posts mentioning your account (e.g., `mentions:me`).
+        from:       - From User: Finds posts from a specific user (e.g., `from:virtualcuriosities.com`).
+        from:me     - From Me: Finds posts from your account (e.g., `from:me`).
+        URL Search  - Searches posts containing a specific URL (e.g., `https://example.com/article`).
+        Domain     - Finds posts linking to a domain (e.g., `domain:virtualcuriosities.com`).
+        since:     - Posts Since Date: Finds posts after a specific date (e.g., `since:2024-11-01`).
+        until:     - Posts Until Date: Finds posts before a specific date (e.g., `until:2024-01-01`).
+        lang:      - Language Filter: Finds posts in a specific language (e.g., `lang:ja`).
+        """
+    elif search_engine == "Twitter":
+        help_message = """
+        Keywords and Phrases:
+        - Keyword Search: Finds tweets containing a specific word (e.g., `cat`).
+        - Exact Phrase: Finds tweets with an exact phrase (e.g., `"cats are liquid"`).
+        - Hashtag: Finds tweets with a specific hashtag (e.g., `#CatsOfTwitter`).
+
+        User Search:
+        - to:username: Finds tweets sent to a specific user (e.g., `to:nyannyancat`).
+        - from:username: Finds tweets from a specific user (e.g., `from:nyannyancat`).
+        - @username: Finds tweets mentioning a user (e.g., `@nyannyancat`).
+
+        Filters:
+        - Exclude Words: Use `-` to exclude words (e.g., `-kittens`).
+        - Language: Limit results to a language with `lang:code` (e.g., `lang:en`).
+        - Engagement: `min_replies:`, `min_faves:`, `min_retweets:` (e.g., `min_replies:10`).
+
+        Content Filters:
+        - Links Only: `filter:links` (e.g., `cats filter:links`).
+        - Replies Only: `filter:replies` (e.g., `-filter:replies`).
+
+        Timeframe Filters:
+        - Since: `since:YYYY-MM-DD` (e.g., `since:2022-01-01`).
+        - Until: `until:YYYY-MM-DD` (e.g., `until:2022-04-01`).
+        - Date Range: Combine `since:` and `until:` (e.g., `since:2022-01-01 until:2022-04-01`).
+        """ 
     else:
         help_message = """
         1. site:        - Limits search results to a specific site or domain.
@@ -154,22 +196,33 @@ def select_operator(search_engine):
 [-] Type 'help' to display detailed explanations of each operator.
 """
     display_in_box(operator_message)
-    
-    operators = {
-        '1': '+', '2': '-', '3': '""', '4': '*', '5': '|',
-        '6': '~~', '7': '~', '8': '!', '9': 'url:', '10': 'site:', 
-        '11': 'domain:', '12': 'title:', '13': 'mime:', '14': 'lang:', '15': 'date:' 
-    } if search_engine == "Yandex" else {
-        '1': '"', '2': 'OR', '3': 'AND', '4': 'NOT', '5': 'site:',
-        '6': 'inurl:', '7': 'intitle:', '8': 'inanchor:', '9': 'filetype:', '10': 'inbody:',
-        '11': 'feed:', '12': 'near:', '13': 'before:', '14': 'after:', '15': 'ip:', 
-        '16': 'contains:', '17': 'related:', '18': 'hasfeed:', '19': 'loc:', '20': 'linkfromdomain:'
-    } if search_engine == "Bing" else {
-        '1': '"', '2': 'OR', '3': 'AND', '4': '-', '5': 'site:',
-        '6': 'intitle:', '7': 'inurl:', '8': 'allintitle:', '9': 'allinurl:', '10': 'intext:',
-        '11': 'allintext:', '12': 'filetype:', '13': 'cache:', '14': 'related:', '15': 'info:',
-        '16': 'link:', '17': 'define:', '18': 'numrange:', '19': 'before:', '20': 'after:'
-    }
+    if search_engine == "Bluesky":
+        operators = {
+            '1': '"', '2': '#', '3': '@', '4': 'to:', '5': 'from:', 
+            '6': 'mentions:', '7': 'domain:', '8': 'since:', '9': 'until:', '10': 'lang:'
+        }
+    elif search_engine == "Twitter":
+        operators = {
+            '1': 'to:', '2': 'from:', '3': '@', '4': '-', '5': 'lang:',
+            '6': 'since:', '7': 'until:', '8': 'min_replies:', '9': 'min_faves:'
+        }
+    elif search_engine == "Google":
+        operators = {
+            '1': '"', '2': 'OR', '3': '-', '4': 'site:', '5': 'filetype:',
+            '6': 'intitle:', '7': 'inurl:', '8': 'related:', '9': 'define:'
+        }
+    elif search_engine == "Bing":
+        operators = {
+            '1': '"', '2': 'OR', '3': 'AND', '4': 'NOT', '5': 'site:',
+            '6': 'filetype:', '7': 'intitle:', '8': 'inurl:'
+        }
+    elif search_engine == "Yandex":
+        operators = {
+            '1': '+', '2': '-', '3': '""', '4': '*', '5': 'site:',
+            '6': 'lang:', '7': 'date:'
+        }
+    else:
+        operators = {}
 
     for key, op in operators.items():
         print(f"{key}. {op}")
