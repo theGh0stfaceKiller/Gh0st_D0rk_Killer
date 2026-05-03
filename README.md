@@ -1,6 +1,8 @@
 # Gh0stD0rk Killer
 
-![gdk](https://github.com/user-attachments/assets/646d0a6b-56f0-4218-9c10-9a1d95572845)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/646d0a6b-56f0-4218-9c10-9a1d95572845" alt="gdk" width="300"/>
+</p>
 
 Welcome to **Gh0stD0rk Killer**, a tool designed for ethical hackers, OSINT investigators, and cybersecurity researchers to create advanced search engine dorks for refining search results on Google, Bing, DuckDuckGo, # Gh0stD0rk Killer
  
