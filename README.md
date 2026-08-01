@@ -5,7 +5,7 @@
 Advanced search dork generator for OSINT investigators, ethical hackers, and security researchers, built and maintained as part of [True Indie](https://trueindie661.substack.com), where we teach the methods behind tools like this one.
 
 <p align="center">
-  <img width="754" height="716" alt="indiedork" src="https://github.com/user-attachments/assets/606b6060-0d9a-4498-a2a4-a1c351d0962b" />
+  <img width="400" height="380" alt="indiedork" src="https://github.com/user-attachments/assets/606b6060-0d9a-4498-a2a4-a1c351d0962b" />
 </p>
 
 ## Supported Search Engines
@@ -200,12 +200,8 @@ If you want to learn the thinking behind dorking, OSINT collection, and the broa
 
 ## Author
 
-Built and maintained as part of **True Indie**
-[trueindie661.substack.com](https://trueindie661.substack.com)
+Built and maintained as part of [**True Indie**](https://trueindie661.substack.com)
 
 ## License
 
 For personal and professional security research use.
-
-
-
