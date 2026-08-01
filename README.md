@@ -1,11 +1,12 @@
-# IndieDork 
-
-<img width="754" height="716" alt="indiedork" src="https://github.com/user-attachments/assets/606b6060-0d9a-4498-a2a4-a1c351d0962b" />
-
+# IndieDork
 
 *A True Indie tool*
 
-Advanced search dork generator for OSINT investigators, ethical hackers, and security researchers, built and maintained as part of [True Indie](https://trueindie661.substack.com), where I teach the methods behind tools like this one.
+Advanced search dork generator for OSINT investigators, ethical hackers, and security researchers, built and maintained as part of [True Indie](https://trueindie661.substack.com), where we teach the methods behind tools like this one.
+
+<p align="center">
+  <img width="754" height="716" alt="indiedork" src="https://github.com/user-attachments/assets/606b6060-0d9a-4498-a2a4-a1c351d0962b" />
+</p>
 
 ## Supported Search Engines
 
@@ -121,7 +122,7 @@ python3 indiedork.py --timed
 | 9 | Exposed AWS Keys | Google |
 | 10 | Twitter OSINT, Target | Twitter |
 
-> ⚠️ **Templates 5, 6, 7, and 9 return real, live results.** These queries surface systems and credentials that are actually exposed on the internet right now, not sample or sandbox data. Only run these against assets you own or have explicit written authorization to test. Running them against anything else can cross into unauthorized access, which carries real legal consequences regardless of intent.
+> ⚠️ **Templates 5, 6, 7, and 9 can return real, live results.** These queries surface systems and credentials that are actually exposed on the internet right now, not sample or sandbox data. Only run these against assets you own or have explicit written authorization to test. Running them against anything else can cross into unauthorized access, which carries real legal consequences regardless of intent.
 
 ## Example Session
 
@@ -193,7 +194,7 @@ Keys are stored in:
 
 ## Ethical Use
 
-This tool is built for authorized security research, OSINT investigation, and education, the same standard I hold every piece of tradecraft I teach on True Indie to. Always get proper, explicit authorization before testing any system that isn't your own. The templates in this tool, especially the ones flagged above, return real data about real, currently-exposed systems. Misusing that is on you, not the tool, and it can carry real legal consequences.
+This tool is built for authorized security research, OSINT investigation, and education, the same standard we hold every piece of tradecraft we teach on True Indie to. Always get proper, explicit authorization before testing any system that isn't your own. The templates in this tool, especially the ones flagged above, return real data about real, currently-exposed systems. Misusing that is on you, not the tool, and it can carry real legal consequences.
 
 If you want to learn the thinking behind dorking, OSINT collection, and the broader intelligence cycle this tool fits into, that's what [True Indie](https://trueindie661.substack.com) is for.
 
