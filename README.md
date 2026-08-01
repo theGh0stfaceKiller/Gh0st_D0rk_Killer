@@ -1,4 +1,7 @@
-# IndieDork
+# IndieDork 
+
+<img width="754" height="716" alt="indiedork" src="https://github.com/user-attachments/assets/606b6060-0d9a-4498-a2a4-a1c351d0962b" />
+
 
 *A True Indie tool*
 
