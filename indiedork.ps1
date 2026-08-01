@@ -1,8 +1,8 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-    Gh0stD0rk Killer - PowerShell Edition
-    Created by: The_Gh0stface_Killer
+    IndieDork - PowerShell Edition
+    A True Indie tool
     For ethical hackers, OSINT investigators, and cybersecurity researchers.
 
 .DESCRIPTION
@@ -32,10 +32,10 @@
     Run timed dork generation mode.
 
 .EXAMPLE
-    .\gdk.ps1
-    .\gdk.ps1 -Engine Google -Dork 'site:example.com filetype:pdf' -Format url
-    .\gdk.ps1 -Template 1 -Save
-    .\gdk.ps1 -Shodan 'port:3389 os:Windows'
+    .\indiedork.ps1
+    .\indiedork.ps1 -Engine Google -Dork 'site:example.com filetype:pdf' -Format url
+    .\indiedork.ps1 -Template 1 -Save
+    .\indiedork.ps1 -Shodan 'port:3389 os:Windows'
 #>
 
 [CmdletBinding()]
@@ -51,7 +51,7 @@ param(
 )
 
 # ── Settings ──────────────────────────────────────────────────
-$SettingsFile = Join-Path $HOME ".gdk_settings.json"
+$SettingsFile = Join-Path $HOME ".indiedork_settings.json"
 $DorksFile    = "saved_dorks.txt"
 
 $DefaultSettings = @{
@@ -77,7 +77,7 @@ function Load-Settings {
     return $DefaultSettings.Clone()
 }
 
-function Save-GDKSettings($settings) {
+function Save-IndieDorkSettings($settings) {
     $settings | ConvertTo-Json | Set-Content $SettingsFile
 }
 
@@ -164,6 +164,9 @@ $EngineBaseUrls = @{
 }
 
 # ── Pre-built templates ───────────────────────────────────────
+# NOTE: Templates 5, 6, 7, and 9 return real, live results against
+# real systems. Only run these against assets you own or have
+# explicit written authorization to test.
 $Templates = [ordered]@{
     "1"  = @{ Name="Exposed Login Pages";         Engine="Google";  Dork='intitle:"login" OR intitle:"admin" inurl:login filetype:php' }
     "2"  = @{ Name="Open Directory Listing";      Engine="Google";  Dork='intitle:"index of /" intext:"parent directory"' }
@@ -189,58 +192,16 @@ function Show-Box($text) {
 
 function Show-Banner {
     $logo = @'
-                                                                                               
-                                       ==;    .-+:                                             
-                           ::..  .--;;.=#**-;+***.:;;-;  ...:.                                 
-                           ;***+++*%%###****#****###%#++++**=.                                 
-                     :;;;---=*+**+=+-::-:.;: -..;;:;=+++*+**----;;;.                           
-                 ..:;=*#*+***+=-;  .  ...: :. .: .  .  :-=+***++##+-::.                        
-              .-*****+++**++=;:  ..:;::+-+++*-*-=-.;;..  .:;+++**+++****+;                     
-   .:        .;=*+=++**=;:   .:;--: ;+-+@#%%%%%%*;+=..;--:.   .;-+**+++*=;:        .:          
-   ;%*******###*++*+=:     .:::::;*+-+@%%%%%%%%%%@#==*=:::::.     .-+**++*##*******#*          
-   ;@#*****##%@%#=:          .;=+=-#@%#**#*=++#***#%#+-++-:          .;*%@%###****#%*          
-   .%@%%#*++++#@@++**=:         ;*%*++##%+:==:;#%#***#%=.        .-+*+=%@#*++++*%%%@-          
-    ;%@%+*%#+++*++**#@@+---;     .=: +%@@:;@@* *@%#=;=;     :---=%@%#**+*+++*%#+#@@+           
-     :#%*+++++***%#++*#**##%%-::..+#+;;;;: .. .;::;=**:.:::*%%#***#++#%#**+++++*%%=            
-       #%####%%%#%#+++*##*+*##*##%*+%%#*+=+=-=++*#%%#+%##*#%*++##*+++*#%%%%####%%;             
-       *++#*:-%%##**#%%%%#+++*#*++#*:=+@=*+*@=%-%*+:=#++*#*+++*#%%%#***#%@+:-#*+#-             
-      .#+=*-  :+#%@@%###****##%#++#*  -+:;;-=:-:-=. ;%++*####****#%%@@@%*;   #++*=             
-      ;#++#-      ::.=+#%%#*###**+;:-;:.::;:.;::..:-;:=*####**%%#*=;::.      *+++*             
-     .*+++#-     .: ;:  .;;:;;::     .;::..--:.::;:     .:;;::::   =  :      #+++*-            
-     +*+++*+     ;- =.  +%%%%##*=-.      ..;+ :       :-+*#%%%#*:  =..-     :#++++#;           
-      ;**++#.     ;.:-  %@@@@@@@@@%*;     .:.:      =#@@@@@@@@@@- .= ;:     +*++*=.            
-     :**+++*+      . ;;  +@@@%%%%%%@+      :;      .@@%%%%%@@@%; .=.       :#+++**=            
-      :+#+++*-        :-: :+#@@@@@%+  ............  ;#@@@@@%*-. ;;        .*+++**-             
-    .=+++++++#:         :;:. .;--;.    :::.....::.    :;-;:...::.         :*+++++++;           
-    .=**++++*=                     .:.    .:::.   ..:.                     =*+++***;           
-       :+#++#                     =****+==+++++==*****:                    .#+*#-.             
-       =**=#-                 .;  .-+*==**++++**+=++=:  ::                  **+**;             
-       :-++#.             .::::     .;;..:;==-;. :-:     .::::          .*. =#+=;.             
-         :*#            ..            .::..:::.:::             ..      .**- ;%-.               
-      .-****           ;. .....;-;:..              ..::;-...... :.     *++* ;#++=:             
-      .;::-*    .:-=======+====+##++*+++=-=--=--=++*++*#+----=+-------*+++*-=#+===:::..        
-        .-+#;:-=+*+++++++++++++++*#+*++**+*****+**+*++#+++++++++*+++*#++++**++++++****++=;.    
-        -##*****+++++++++++++++++*##*++++************#**++++++++++++**=+++*+=+++++++++++*#+    
-          -*#*;=+++**+++++++++++*++*#+************+*#++*++++*++*****+*#+++**+**+***+++++-;     
-            :--   .:;-===++=-+++*+++++==----;----=+*+++*+;--;;==::::::;*=+*;;:::::....         
-              ;=:         :;:.......   ....   ....  ..... .:;;.        ;#*-                    
-                --:         .:.       ..:.     .:.       .::     .   .---#.                    
-                  ;--;;=:         .;-;:.         .:--:.         --:;-;:                        
-                     .+**=:..:;-=+***+=--;::::;;-=+****+=;:...-+**;                            
-                     -++++*****++++++++***********+++++++******+=++.                           
-                    .#+**+=*++++**++++++=========++++++**++=*+=**+#+                           
-                     ;-;: .#**+-:***+#**##*****#**#+++#-;+**#= .:--.                           
-                           :;.   :;. ..::-=--==;;..  :;   .:;                                  
-                                                                                               
+
 '@
-    $box_w = 97
+    $box_w = 50
     Write-Host ("`n+" + ("-" * $box_w) + "+")
     foreach ($line in $logo -split "`n") {
-        Write-Host ("| " + $line.PadRight($box_w) + " |")
+        Write-Host ("| " + $line.PadRight($box_w) + " |") -ForegroundColor DarkRed
     }
     foreach ($line in @(
         "",
-        "  Gh0stD0rk Killer  |  Created by: The_Gh0stface_Killer",
+        "  IndieDork  |  A True Indie Tool",
         "  OSINT | Ethical Hacking | Security Research",
         "  Type 'exit' at any prompt to quit.",
         ""
@@ -484,7 +445,7 @@ function Show-SettingsMenu {
             "5" { return }
             default { Write-Host "[-] Invalid option." }
         }
-        Save-GDKSettings $Settings
+        Save-IndieDorkSettings $Settings
         Write-Host "[+] Settings saved."
     }
 }
@@ -569,7 +530,7 @@ while ($true) {
         }
         "6" { Show-SettingsMenu }
         "7" {
-            Write-Host "`nThank you for using Gh0stD0rk Killer. Goodbye.`n"
+            Write-Host "`nThank you for using IndieDork. Goodbye.`n"
             exit 0
         }
         default { Write-Host "[-] Invalid option." }
