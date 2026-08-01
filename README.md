@@ -48,7 +48,7 @@ Advanced search dork generator for OSINT investigators, ethical hackers, and sec
 ## Installation
 
 ```
-git clone https://github.com/[your-username]/IndieDork.git
+git clone https://github.com/True-Indie/IndieDork.git
 cd IndieDork
 ```
 
