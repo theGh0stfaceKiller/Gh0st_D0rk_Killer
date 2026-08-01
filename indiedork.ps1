@@ -192,9 +192,13 @@ function Show-Box($text) {
 
 function Show-Banner {
     $logo = @'
-
+ ___           _ _      ____             _    
+|_ _|_ __   __| (_) ___|  _ \  ___  _ __| | __
+ | || '_ \ / _` | |/ _ \ | | |/ _ \| '__| |/ /
+ | || | | | (_| | |  __/ |_| | (_) | |  |   < 
+|___|_| |_|\__,_|_|\___|____/ \___/|_|  |_|\_\
 '@
-    $box_w = 50
+    $box_w = 54
     Write-Host ("`n+" + ("-" * $box_w) + "+")
     foreach ($line in $logo -split "`n") {
         Write-Host ("| " + $line.PadRight($box_w) + " |") -ForegroundColor DarkRed
